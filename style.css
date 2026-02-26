@@ -1,0 +1,211 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&family=Open+Sans:wdth,wght@75..100,300..800&family=Overpass:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100..900&display=swap');
+
+:root{
+  --Red-400: hsl(0, 100%, 74%);
+  --Green-400: hsl(154, 59%, 51%);
+  --Purple-700: hsl(248, 32%, 49%);
+  --Gray-900: hsl(249, 10%, 26%);
+  --Purple-350: hsl(246, 25%, 77%);
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: var(--Red-400);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+    font-family: "Open Sans", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 375px;
+  padding: 3rem 1.5rem;
+
+}
+.learn-introduction{
+/* margin-top: 2rem; */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+.learn-introduction h1{
+  font-weight: 700;
+  font-size: 2.3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.learn-introduction p{
+text-align: center;
+  font-size: 1.1rem;
+margin-bottom: 4rem;
+line-height: 1.8rem;
+}
+.learn-price{
+  display: flex;
+  flex-direction: column;
+}
+.price-days-card{
+  background: var(--Purple-700);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 0 hsla(249, 10%, 26%, 0.353);
+}
+.price-days-card span{
+  font-weight: 700;
+}
+.learn-form{
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 0 hsla(249, 10%, 26%, 0.353);
+  padding: 1.3rem;
+}
+.input-group{
+  display: flex;
+  flex-direction: column;
+}
+.input-icon{
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  border: 0.5px solid var(--Purple-350);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+/* js */
+.input-icon.error-active{
+  border: 0.5px solid var(--Red-400);
+}
+/* js */
+.error-icon{
+  padding-right: 0.5rem;
+  display: none;
+}
+.input-icon input{
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+}
+::placeholder{
+  color: var(--Purple-350);
+  font-size: 16px;
+  font-weight: 600;
+}
+/* js */
+.input-group p[aria-hidden="false"]{
+  color: var(--Red-400);
+  font-style: italic;
+  text-align: right;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+.learn-form button{
+  padding: 1.5rem;
+    border-radius: 0.3rem;
+    width: 100%;
+   font-size: 1rem;
+   font-weight: 700;
+   color: white;
+   border: none;
+   background: var(--Green-400);
+box-shadow: 0 3px 0 hsl(154, 77%, 32%);
+cursor: pointer;
+   
+}
+.learn-form button:hover{
+  background: hsla(154, 59%, 51%, 0.713);;
+}
+.terms-conditions{
+color: var(--Purple-350);
+font-size: 0.8rem;
+font-weight: 400;
+text-align: center;
+margin-top: 1rem;
+line-height: 1.5rem;
+}
+.terms-conditions span{
+  color: var(--Red-400);
+  font-weight: 700;
+}
+
+@media (min-width: 1440px){
+  body{
+    background-image: url(./images/bg-intro-desktop.png);
+    align-items: center;
+      justify-content: center;
+      display: flex;
+  }
+    .main-container{
+      display: flex;
+      flex-direction: row;
+     max-width: 1110px;
+     width: 100%;
+    padding: 0;
+    gap: 45px;
+      
+    }
+        .learn-introduction{
+          padding-left: 4rem;
+          align-items: flex-start;
+            text-align: left;
+            width: 50%;
+          
+        }
+                .learn-introduction h1 {
+                  font-weight: 700;
+                  font-size: 3rem;
+                  text-align: start;
+                  line-height: 3rem;
+                }
+                                .learn-introduction p {
+                                  text-align: start;
+                                  font-size: 1rem;
+                                 
+                                 
+                                }
+                .learn-price{
+                 flex: 1;
+                }
+                                .price-days-card {
+                                  padding: 1rem 2rem;
+                                  font-size: 1rem;
+                                  
+                                }
+                                ::placeholder{
+                                  font-size: 14px;
+                                }
+                                .input-icon {
+                                  padding: 1rem;
+                                 
+                                }
+                         .learn-form button{
+                           padding: 1rem;
+                           font-size: 1rem;
+                           }
+                                .terms-conditions{
+                                  font-size: 0.7rem;
+
+                                }
+
+   }
